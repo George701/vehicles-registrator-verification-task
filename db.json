@@ -1,0 +1,39 @@
+{
+    "posts": [
+      { "id": 1, "title": "json-server", "author": "typicode" }
+    ],
+    "comments": [
+      { "id": 1, "body": "some comment", "postId": 1 }
+    ],
+    "customers": [
+        {
+            "id": 1,
+            "name": "Kalles Grustransporter",
+            "address": "Cementvägen 8, 111 11 Södertälje",
+            "vehicles": [
+                { "vehicleID": "YS2R4X20005399401", "regNum": "ABC123"},
+                { "vehicleID": "VLUR4X20009093588", "regNum": "DEF456"},
+                { "vehicleID": "VLUR4X20009048066", "regNum": "GHI789"}
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Johans Bulk",
+            "address": "Balkvägen 12, 222 22 Stockholm",
+            "vehicles": [
+                { "vehicleID": "YS2R4X20005388011", "regNum": "JKL012"},
+                { "vehicleID": "YS2R4X20005387949", "regNum": "MNO345"}
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Haralds Värdetransporter",
+            "address": "Budgetvägen 1, 333 33 Uppsala",
+            "vehicles": [
+                { "vehicleID": "VLUR4X20009048066", "regNum": "PQR678"},
+                { "vehicleID": "YS2R4X20005387055", "regNum": "STU901"}
+            ]
+        }
+    ],
+    "profile": { "name": "typicode" }
+  }

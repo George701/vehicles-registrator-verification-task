@@ -1,0 +1,24 @@
+{
+  "name": "vehicles-registrator-verification-task",
+  "version": "1.0.0",
+  "description": "Application to observe status of vehicles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"json-server --watch db.json --port 3001\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/George701/vehicles-registrator-verification-task.git"
+  },
+  "author": "Georgii Chernikov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/George701/vehicles-registrator-verification-task/issues"
+  },
+  "homepage": "https://github.com/George701/vehicles-registrator-verification-task#readme",
+  "dependencies": {
+    "concurrently": "^4.1.0"
+  }
+}
