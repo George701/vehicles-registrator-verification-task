@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
 import customerReducer from './customerReducer';
+import vehiclerReducer from './vehicleReducer';
 
 export default combineReducers({
-    customer:  customerReducer, // important name
+    customers:  customerReducer,
+    vehicles:  vehiclerReducer
 });
