@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Status from './Status';
+import Status from '../Status';
 
 class Customer extends Component {
     render() {

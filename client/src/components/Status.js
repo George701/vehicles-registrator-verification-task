@@ -14,7 +14,7 @@ class Status extends Component {
         this.setState({id: id});
 
         this.props.getVehiclesStatus(id);
-        this.interval = setInterval(() => {this.props.getVehiclesStatus(id); console.log("Update...")}, 60000);
+        this.interval = setInterval(() => {this.props.getVehiclesStatus(id); console.log("Update...")}, 10000);
     }
    
     componentWillUnmount() {
