@@ -6,20 +6,13 @@ import PropTypes from "prop-types";
 import Customer from './Customer';
 
 class Customers extends Component {
-    state = {
-        list: {}
-    }
 
     componentDidMount(){
-        // TODO: @
-        const { list } = this.props;
-        console.log(list);
-        this.props.getData();
+        const { data } = this.props;
+        console.log(data);
     }
 
     render() {
-        const { data, list } = this.props;
-        console.log(list);
         return (
             <div>
                 {/* {customers.map(customer => {
