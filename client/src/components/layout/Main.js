@@ -5,14 +5,13 @@ class Main extends Component {
     state = {
         controllers: [],
         statuses: [],
-        data: [],
+        data: "",
     }
     componentDidMount(){
         const { customers } = this.props;
         let customer_array = [];
         let statuses_array = [];
         for(let i = 0; i < customers.length; i++){
-            // console.log(customers[i].id, customers[i].name);
             customer_array.push({"id": customers[i].id, "name" : customers[i].name})
             statuses_array.push(true)
         }
@@ -37,7 +36,7 @@ class Main extends Component {
 
     render() {
         const { controllers, statuses, data } = this.state;
-        if(controllers && statuses && data){
+        if(controllers !== [] && statuses !== [] && data !== ""){
             return (
                 <div>
                     <h1>Dashboard</h1>
@@ -52,7 +51,7 @@ class Main extends Component {
                         })}
                     </div>
                     <hr/>
-                    {}
+                    {/* {console.log(data)} */}
                     <Customers data={data}/>
                 </div>
             )
@@ -66,14 +65,25 @@ class Main extends Component {
 }
 
 let makeListOfCustomers = (arrC, arrS) => {
-    let temp_arr = [];
+    // let temp_arr = [];
+    let test = "";
     for(let i = 0; i < arrC.length; i++){
         if(arrS[i] !== false){
-            temp_arr.push(arrC[i].id);
+            // temp_arr.push(arrC[i].id);
+            // console.log(arrC.length === i);
+            // console.log(i);
+            if(i !== arrC.length-1){
+                test += "id="+arrC[i].id+"&";
+            }else{
+                test += "id="+arrC[i].id;
+            }
         }
     }
-    
-    return temp_arr;
+
+    // console.log(test);
+    // return temp_arr;
+    return test;
 }
+
 
 export default Main;
