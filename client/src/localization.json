@@ -1,0 +1,70 @@
+{
+    "eng": {
+        "name": "Name",
+        "address": "Address",
+        "regNum": "Registration number",
+        "conn": "connection",
+        "brand": "Vehicle registrator",
+        "customer_placeholder": "Type the name of customer",
+        "status_def": "All statuses",
+        "status_p": "Connected",
+        "status_n": "Not connected",
+        "languageSet": {
+            "eng": "English",
+            "ru": "Russian",
+            "se": "Swedish",
+            "es": "Spanish"
+        }
+    },
+    "ru": {
+        "name": "Имя",
+        "address": "Адрес",
+        "regNum": "Регистрационный номер",
+        "conn": "соединение",
+        "brand": "Регистратор транспорта",
+        "customer_placeholder": "Напечатайте имя пользователя",
+        "status_def": "Все соединения",
+        "status_p": "Подключенные",
+        "status_n": "Без соединения",
+        "languageSet": {
+            "eng": "Английский",
+            "ru": "Русский",
+            "se": "Швецкий",
+            "es": "Испанский"
+        }
+    },
+    "se": {
+        "name": "Namn",
+        "address": "Adress",
+        "regNum": "Registreringsnummer",
+        "conn": "anslutning",
+        "brand": "Fordonsregistrator",
+        "customer_placeholder": "Skriv namnet på kunden",
+        "status_def": "Alla statuser",
+        "status_p": "Ansluten",
+        "status_n": "Ej ansluten",
+        "languageSet": {
+            "eng": "Engelska",
+            "ru": "Ryska",
+            "se": "Svenska",
+            "es": "Spanska"
+        }
+    },
+    "es": {
+        "name": "Nombre",
+        "address": "Dirección",
+        "regNum": "Número de registro",
+        "conn": "conexión",
+        "brand": "Registrador de vehículos",
+        "customer_placeholder": "Escriba el nombre del cliente",
+        "status_def": "Todos los estados",
+        "status_p": "Conectado",
+        "status_n": "No conectado",
+        "languageSet": {
+            "eng": "Inglés",
+            "ru": "Ruso",
+            "se": "Sueco",
+            "es": "Español"
+        }
+    }
+}

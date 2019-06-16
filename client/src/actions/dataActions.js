@@ -1,15 +1,28 @@
-import { GET_DATA } from './type';
+import { GET_CUSTOMERS, GET_VEHICLES } from './type';
 import axios from 'axios';
 
-export const getData = (arr) => async dispatch => {
+export const getCustomers = () => async dispatch => {
 
-    console.log(arr);
     const url = "http://localhost:3001/customers/"; // main
 
 
     const res = await axios.get(url);
     dispatch({
-        type: GET_DATA,
+        type: GET_CUSTOMERS,
         payload: res.data
     })
 };
+
+export const getVehiclesStatus = () => async dispatch => {
+
+    const url = 'http://localhost:3001/vehicles/';
+
+
+    const res = await axios.get(url);
+    dispatch({
+        type: GET_VEHICLES,
+        payload: res.data
+    })
+};
+
+

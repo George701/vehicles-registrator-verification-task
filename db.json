@@ -6,7 +6,7 @@
             "address": "Cementvägen 8, 111 11 Södertälje",
             "vehicles": [
                 { "vehicleID": "YS2R4X20005399401", "vehicle": "bike", "regNum": "ABC123"},
-                { "vehicleID": "VLUR4X20009093588", "vehicle": "motocycle", "regNum": "DEF456"},
+                { "vehicleID": "VLUR4X20009093588", "vehicle": "motorcycle", "regNum": "DEF456"},
                 { "vehicleID": "VLUR4X20009048066", "vehicle": "van", "regNum": "GHI789"}
             ]
         },
@@ -24,8 +24,36 @@
             "name": "Haralds Värdetransporter",
             "address": "Budgetvägen 1, 333 33 Uppsala",
             "vehicles": [
-                { "vehicleID": "VLUR4X20009048066", "vehicle": "plane", "regNum": "PQR678"},
-                { "vehicleID": "YS2R4X20005387055", "vehicle": "bike", "regNum": "STU901"}
+                { "vehicleID": "VLUR4X20009048066", "vehicle": "van", "regNum": "PQR678"},
+                { "vehicleID": "YS2R4X20005387055", "vehicle": "plane", "regNum": "STU901"}
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Alexander Sokolov",
+            "address": "Yaroslavskoe Shosse 8, 185014  Moskovskaya oblast",
+            "vehicles": [
+                { "vehicleID": "YS2R4X20005399402", "vehicle": "car", "regNum": "AVC124"},
+                { "vehicleID": "VLUR4X20009093589", "vehicle": "bike", "regNum": "REF856"},
+                { "vehicleID": "VLUR4X20009048067", "vehicle": "motorcycle", "regNum": "PHI780"}
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Johnatan Bree",
+            "address": "Begley Street 83, NSW 2227 Gymea Bay",
+            "vehicles": [
+                { "vehicleID": "YS2R4X20005388012", "vehicle": "plane", "regNum": "CKL013"},
+                { "vehicleID": "YS2R4X20005387946", "vehicle": "van", "regNum": "GNO346"}
+            ]
+        },
+        {
+            "id": 6,
+            "name": "Jeremías Cadaval",
+            "address": "Domingo Beltrán 37, 02240 Mahora",
+            "vehicles": [
+                { "vehicleID": "VLUR4X20009048067", "vehicle": "motorcycle", "regNum": "KQR648"},
+                { "vehicleID": "YS2R4X20005387056", "vehicle": "shuttle", "regNum": "MTU921"}
             ]
         }
     ],
@@ -36,7 +64,7 @@
         },
         {
             "vehicleID": "VLUR4X20009093588",
-            "status": "1"
+            "status": "0"
         },
         {
             "vehicleID": "VLUR4X20009048066",
@@ -48,14 +76,34 @@
         },
         {
             "vehicleID": "YS2R4X20005387949",
-            "status": "1"
-        },
-        {
-            "vehicleID": "VLUR4X20009048066",
-            "status": "1"
+            "status": "0"
         },
         {
             "vehicleID": "YS2R4X20005387055",
+            "status": "1"
+        },
+        {
+            "vehicleID": "YS2R4X20005399402",
+            "status": "0"
+        },
+        {
+            "vehicleID": "VLUR4X20009093589",
+            "status": "1"
+        },
+        {
+            "vehicleID": "VLUR4X20009048067",
+            "status": "1"
+        },
+        {
+            "vehicleID": "YS2R4X20005387056",
+            "status": "1"
+        },
+        {
+            "vehicleID": "YS2R4X20005388012",
+            "status": "1"
+        },
+        {
+            "vehicleID": "YS2R4X20005387946",
             "status": "1"
         }
     ]

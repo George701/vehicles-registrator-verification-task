@@ -1,49 +1,39 @@
 import React, { Component } from 'react';
-import {connect} from "react-redux";
-import { getVehiclesStatus } from "../actions/vehicleActions";
-import PropTypes from "prop-types";
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+
+import Spinner from './layout/SpinnerSmall';
 
 class Status extends Component {
-    state = {
-        id: "",
-        status: ""
-    }
-    
-    componentDidMount(){
-        const { id } = this.props;
-        this.setState({id: id});
+    render() {
+        const { vehicleStatus, language } = this.props;
+        console.log()
 
-        this.props.getVehiclesStatus(id);
-        this.interval = setInterval(() => {this.props.getVehiclesStatus(id); console.log("Update...")}, 10000);
-    }
-   
-    componentWillUnmount() {
-       clearInterval(this.interval);
-    }
-
-    componentWillReceiveProps(props){
-        const { vehicles } = props;
-        // console.log(vehicles);
-        const { id } = this.state;
-        if(vehicles[0].vehicleID === id){
-            // console.log("State status: "+this.state.status+" | status in props: "+vehicles[0].status);
-            if(this.state.status !== vehicles[0].status){
-                this.setState({status: vehicles[0].status});
-            }
-            
+        if(vehicleStatus){
+            return (
+                <div className="vehicle-text vehicle-line">
+                    <span className="vehicle-st">{language.conn}:</span> {this.generateStatusPic(vehicleStatus)}
+                </div>
+            )
+        }else{
+            return <Spinner/>
         }
     }
-
-    render() {
-        const { status } = this.state;
-        // console.log(status);
-        return <span>connection: {status}</span>
+    
+    generateStatusPic = (type) => {
+        if(type === "1") return <i className="fas fa-check-circle status-p"/>
+        else return <i className="fas fa-times-circle status-n"/>
     }
 }
 
 Status.propTypes = {
-    getVehiclesStatus: PropTypes.func.isRequired,
-    // vehicles: PropTypes.array.isRequired
-};
+    vehicles: PropTypes.object
+}
 
-export default connect((state) => {return {vehicles: state.vehicles.vehicles}},{getVehiclesStatus})(Status);
+export default connect((store, OwnProps) => {
+    // if(store.vehicles[OwnProps.vehicleId] !== undefined){
+    if(!(Object.entries(store.vehicles).length === 0 && (store.vehicles).constructor === Object))return {vehicleStatus: store.vehicles[OwnProps.vehicleId].status}
+    else return {vehicleStatus: "0"}
+})(Status);
+
+// export default connect((store, OwnProps) => {mapStateToProps(store, OwnProps)})(Status);
