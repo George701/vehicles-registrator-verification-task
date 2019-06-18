@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import Status from './Status';
-import Spinner from './layout/SpinnerSmall';
+import Spinner from './loaders/SpinnerSmall';
 
 class Vehicles extends Component {
     render() {

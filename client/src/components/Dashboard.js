@@ -6,7 +6,7 @@ import { getCustomers, getVehiclesStatus } from '../actions/dataActions';
 
 import Customer from './Customer';
 import languageLibrary from '../localization.json';
-import Spinner from './layout/SpinnerBig';
+import Spinner from './loaders/SpinnerBig';
 
 class Dashboard extends Component {
 

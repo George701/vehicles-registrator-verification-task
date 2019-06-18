@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import Spinner from './layout/SpinnerSmall';
+import Spinner from './loaders/SpinnerSmall';
 
 class Status extends Component {
     render() {
@@ -31,9 +31,6 @@ Status.propTypes = {
 }
 
 export default connect((store, OwnProps) => {
-    // if(store.vehicles[OwnProps.vehicleId] !== undefined){
     if(!(Object.entries(store.vehicles).length === 0 && (store.vehicles).constructor === Object))return {vehicleStatus: store.vehicles[OwnProps.vehicleId].status}
     else return {vehicleStatus: "0"}
 })(Status);
-
-// export default connect((store, OwnProps) => {mapStateToProps(store, OwnProps)})(Status);

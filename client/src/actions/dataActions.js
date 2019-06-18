@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export const getCustomers = () => async dispatch => {
 
-    const url = "http://localhost:3001/customers/"; // main
+    const url = "http://localhost:3001/customers/";
 
 
     const res = await axios.get(url);
